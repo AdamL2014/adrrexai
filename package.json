@@ -1,0 +1,12 @@
+{
+  "name": "adrrexai",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "AdrrexAI – prémiová AI chat platforma (Gemini, Groq, OpenAI)",
+  "engines": { "node": ">=20.11" },
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env server.mjs",
+    "demo": "ADRREX_DEMO=1 node server.mjs"
+  }
+}

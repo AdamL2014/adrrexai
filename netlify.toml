@@ -1,0 +1,18 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "DENY"
+
+# Formulář při nasazení tlačítkem „Deploy to Netlify“ – stačí vložit klíč.
+[template.environment]
+  GROQ_API_KEY = "Groq API klíč (začíná gsk_) – console.groq.com → API Keys"
+  GEMINI_API_KEY = "Gemini API klíč (volitelné) – aistudio.google.com → Get API key"
